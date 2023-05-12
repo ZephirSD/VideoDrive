@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/images/logo.png';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -9,7 +10,7 @@ function Header() {
                   <img src={logo} alt='logo-videodrive'/> 
               </div>
               <nav>
-                  <li>Accueil</li>
+                  <li><Link to={'/'} style={{textDecoration: "none", color: 'white'}}>Accueil</Link></li>
                   <li>Listes des produits</li>
                   <li>Panier</li>
                   <li>A Propos</li>
