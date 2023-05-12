@@ -1,0 +1,82 @@
+main.padMain {
+    margin: 0% 10%;
+    // background-color: green;
+    width: calc(100% - 10% * 2);
+    height: 100vh;
+
+    div.gridInfo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        div.caseTitreImage {
+            h1.titreProduit {
+                color: #FACD02;
+                font-weight: 400;
+                font-size: 2.5rem;
+            }
+
+            div.caseImage {
+                width: 100%;
+                height: 40vh;
+                background-color: whitesmoke;
+                border-radius: 25px;
+            }
+
+            p.paraGenre {
+                font-size: 1.20rem;
+
+                span.libelleGenre {
+                    color: #FACD02;
+                }
+
+                span.texteGenre {
+                    color: white;
+                }
+            }
+
+        }
+
+        div.caseBtnPrix {
+            div.caseBtn {
+                display: flex;
+                justify-content: flex-end;
+
+                button.btnPanier {
+                    border: 2px solid #FACD02;
+                    border-radius: 10px;
+                    margin-top: 30px;
+                    cursor: pointer;
+                    padding: 15px 35px;
+                    background-color: transparent;
+                    color: #FACD02;
+                    font-size: 1.10rem;
+                }
+            }
+
+            div.casePrix {
+                margin: 45px 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+                div.prix {
+                    font-size: 2.2rem;
+                    margin-bottom: 15px;
+                    color: #FACD02;
+                }
+
+                div.libellePrix {
+                    color: white;
+                    font-size: 1.05rem;
+                }
+            }
+        }
+    }
+
+    div.paraDescr {
+        margin-top: 15px;
+        color: white;
+        font-size: 1.10rem;
+        text-align: justify;
+    }
+}
