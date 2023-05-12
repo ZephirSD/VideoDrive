@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 180px;
   }
   
   .image {
@@ -23,7 +23,7 @@ body{
   
   .right-arrow {
     position: absolute;
-    top: 40%;
+    top: 48%;
     right: 3%;
     font-size: 3rem;
     color: #FACD02;
@@ -40,7 +40,7 @@ body{
   
   .left-arrow {
     position: absolute;
-    top: 40%;
+    top: 48%;
     left: 3%;
     font-size: 3rem;
     color: #03264C;
@@ -74,6 +74,7 @@ h2{
   }
 .games-list{
     margin-top: 150px;
+    margin-bottom: 50px;
 }
 .games-title{
     display: flex;
