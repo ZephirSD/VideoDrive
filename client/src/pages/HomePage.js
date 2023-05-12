@@ -37,6 +37,7 @@ const HomePage = () => {
           <div>
             <div className="games-title">
               <h2>Nouveautés</h2>
+
               <span>Voir plus ...</span>
             </div>
             <div className="games-container">
