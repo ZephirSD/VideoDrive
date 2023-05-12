@@ -1,8 +1,8 @@
 main.padMain {
-    margin: 0% 10%;
+    margin: 5% 10%;
     // background-color: green;
     width: calc(100% - 10% * 2);
-    height: 100vh;
+    font-family: var(--poppins);
 
     div.gridInfo {
         display: grid;
@@ -49,8 +49,16 @@ main.padMain {
                     padding: 15px 35px;
                     background-color: transparent;
                     color: #FACD02;
-                    font-size: 1.10rem;
+                    font-size: 0.95rem;
+                    transition: 0.3s ease-in-out;
+
+                    &:hover {
+                        background-color: #FACD02;
+                        transition: 0.3s ease-in-out;
+                        color: #0f172a;
+                    }
                 }
+
             }
 
             div.casePrix {
