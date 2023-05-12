@@ -1,6 +1,5 @@
 main.padMain {
     margin: 5% 10%;
-    // background-color: green;
     width: calc(100% - 10% * 2);
     font-family: var(--poppins);
 
@@ -86,5 +85,28 @@ main.padMain {
         color: white;
         font-size: 1.10rem;
         text-align: justify;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main.padMain {
+        div.gridInfo {
+            display: flex;
+            flex-direction: column;
+
+            div.caseBtnPrix {
+                div.caseBtn {
+                    justify-content: center;
+                }
+
+                div.casePrix {
+                    align-items: flex-start;
+
+                    div.prix {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
     }
 }
