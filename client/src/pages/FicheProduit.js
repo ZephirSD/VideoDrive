@@ -2,10 +2,12 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 function FicheProduit() {
   return (
       <>
+          <Header/>
           <main className='padMain'>
               <div className="gridInfo">
                   <div className='caseTitreImage'>
