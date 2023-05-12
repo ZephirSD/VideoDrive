@@ -22,3 +22,26 @@ footer {
         }
     }
 }
+
+@media screen and (max-width: 500px) {
+    footer {
+        flex-direction: column;
+
+        div.infoEntr {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        div.resSociaux {
+            padding: 0px 15%;
+            width: calc(100% - 15% * 2);
+            margin-top: 15px;
+
+            img {
+                cursor: pointer;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
