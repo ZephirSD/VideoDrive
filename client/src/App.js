@@ -1,11 +1,9 @@
-import React from 'react';
-import  './style/style.scss';
+import React from "react";
+import "./style/style.scss";
+import HomePage from "./pages/HomePage";
 
 function App() {
-  return (
-    <>
-    </>
-  )
+  return <HomePage />;
 }
 
-export default App
+export default App;
