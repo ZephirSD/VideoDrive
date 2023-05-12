@@ -16,15 +16,15 @@ body{
   }
   
   .image {
-    width: 1000px;
-    height: 300px;
+    width: 89vw;
+    height: 350px;
     border-radius: 10px;
   }
   
   .right-arrow {
     position: absolute;
     top: 40%;
-    right: 11%;
+    right: 3%;
     font-size: 3rem;
     color: #FACD02;
     z-index: 10;
@@ -35,7 +35,7 @@ body{
   .left-arrow {
     position: absolute;
     top: 40%;
-    left: 10%;
+    left: 3%;
     font-size: 3rem;
     color: #03264C;
     z-index: 10;
@@ -61,7 +61,7 @@ h2{
     margin-bottom: 30px;
   }
 .games-list{
-    margin-top: 80px;
+    margin-top: 150px;
 }
 .games-title{
     display: flex;

@@ -84,3 +84,5 @@ const ImageSlider = ({ slides }) => {
 };
 
 export default ImageSlider;
+
+// source : https://reactjsguru.com/how-to-make-image-slider-in-react/
