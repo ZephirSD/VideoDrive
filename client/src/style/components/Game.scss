@@ -1,5 +1,7 @@
 body{
     background-color: #03264C;
+    font-family: 'Poppins',
+    sans-serif;
 }
 
 
@@ -149,12 +151,12 @@ h2{
                 color: #000000;
                 text-align: left;
                 margin-top: -5px;
-                font-size: 16px;
+                font-size: 14px;
                 width: 90%;
               }
             span{
                 color: #000000;
-                font-size: 32px;
+                font-size: 28px;
                 text-align: right;
                 margin-left: 5px;
                 margin-top: -5px;
@@ -194,7 +196,7 @@ h2{
             justify-content: space-around;
             span{
                 text-align: center;
-                margin-top: 3px;
+                
                 margin-left: 5px;
             }
             &:hover{
