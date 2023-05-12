@@ -1,0 +1,215 @@
+body{
+    background-color: #03264C;
+}
+
+
+// slider
+// ---------------------------------------
+
+.slider {
+    
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+  }
+  
+  .image {
+    width: 1000px;
+    height: 300px;
+    border-radius: 10px;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    top: 40%;
+    right: 11%;
+    font-size: 3rem;
+    color: #FACD02;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .left-arrow {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    font-size: 3rem;
+    color: #03264C;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+  }
+// ----------------------------------
+h2{
+    color: #FACD02;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+.games-list{
+    margin-top: 80px;
+}
+.games-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    span{
+        color: #ffffff;
+        margin-right: 20px;
+        margin-top: 30px;
+        font-size: 20px;
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
+.games-container{
+    display: flex;
+    // flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    
+}
+.game{
+    
+    padding: 0;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    width: 230px;
+    height: 370px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: all 1s ease;
+    transform: scale(1);
+    
+    &:hover{
+        z-index: 1;
+        transform: scale(1.05);
+
+    }
+    .img-container{
+        
+        img{
+            margin: 10px;
+            
+            border-radius: 5px;
+            width: 90%;
+            height: 60%;
+            object-fit: cover;
+        }
+        
+        
+    }
+
+    .info-container{
+        
+        width: 90%;
+        height:100px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        font-weight: 600;
+        .info-title{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            h3{
+                color: #000000;
+                text-align: left;
+                margin-top: -5px;
+                font-size: 16px;
+                width: 90%;
+              }
+            span{
+                color: #000000;
+                font-size: 32px;
+                text-align: right;
+                margin-left: 5px;
+                margin-top: -5px;
+            }
+        }
+        
+        div{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: -15px;
+        }
+        .logo-panier{
+            width: 70px;
+            height: 40px;
+            border:1px #03264C solid;
+            border-radius: 5px;
+            color: #03264C;
+            
+            &:hover{
+                border:1px #ffffff solid;
+                color: #ffffff;
+                background-color: #03264C;
+            }   
+        }
+        .logo-paiement{
+
+            width: 120px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #03264C ;
+            vertical-align: middle;
+            text-align: center;
+           
+            margin-top: 20px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-around;
+            span{
+                text-align: center;
+                margin-top: 3px;
+                margin-left: 5px;
+            }
+            &:hover{
+                border: none;
+                color: #03264C;
+                background-color: #d7d7d7;
+                
+            }
+        }
+        img{
+            margin-top: 9px;
+            margin-right: -2px;
+            width: 20px;
+            height: 20px;
+        
+        }  
+        button{
+            
+            color: white;
+            border: none;
+            font-size: 14px;
+            margin-top: 20px;
+            img{
+                margin: 0 10px -5px 0;
+            }
+            
+        }
+        
+        
+    }
+}
