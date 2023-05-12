@@ -1,0 +1,23 @@
+footer {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    background-color: #0f172a;
+    padding: 25px 10px;
+
+    div.infoEntr {
+        text-align: center;
+        color: white;
+        width: 75%;
+    }
+
+    div.resSociaux {
+        display: flex;
+        justify-content: space-around;
+
+        img {
+            cursor: pointer;
+            width: 3vw;
+            height: auto;
+        }
+    }
+}
