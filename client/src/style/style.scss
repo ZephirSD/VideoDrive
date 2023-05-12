@@ -1,17 +1,18 @@
 // Import de polices d'écritures de Google Fonts
-// @import url();
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 //Création de varibles de styles
 :root {
     --full-width: 100%;
     --full-height: 100vh;
+    --poppins: 'Poppins',
+        sans-serif;
 }
 
 body {
     padding: 0;
     margin: 0;
     background-color: #03264C;
-    font-family: 'Inter'
 }
 
 //Thème clair et sombre pour le projet
