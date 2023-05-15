@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   CardNumberElement,
   CardCvcElement,
@@ -10,7 +10,7 @@ import axios from "axios";
 import cvc from "../assets/images/paiement/cvc.PNG";
 import visa from "../assets/images/paiement/visa.PNG";
 
-export default function PaymentForm() {
+export default function PaymentForm({ id }) {
   const [success, setSuccess] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
@@ -64,6 +64,18 @@ export default function PaymentForm() {
       },
     },
   };
+
+  const [jeuxIdListe, setjeuxIdListe] = useState([]);
+  const fetchJeuxId = async () => {
+    await axios
+      .get(`http://127.0.0.1:4000/api/jeux/${id}`)
+      .then((response) => setjeuxIdListe(response.data));
+  };
+  useEffect(() => {
+    fetchJeuxId();
+  }, []);
+
+  let quantite = 1;
   return (
     <>
       <div className="content-app-pay">
@@ -71,15 +83,17 @@ export default function PaymentForm() {
           <h2>Récapitulatif</h2>
           <div>
             <div className="recap-content-article">
-              <span>1 article</span>
-              <span className="total-price-pay">49 €</span>
+              <span>{`${quantite}`} article</span>
+              <span className="total-price-pay">{`${jeuxIdListe.prix_neuf} €`}</span>
             </div>
             <div>Livraison gratuite</div>
           </div>
 
           <div className="recap-content-total">
             <span>Total</span>
-            <span className="total-price-pay">49 €</span>
+            <span className="total-price-pay">{`${
+              jeuxIdListe.prix_neuf * quantite
+            } €`}</span>
           </div>
         </div>
         <div className="pay-content">
