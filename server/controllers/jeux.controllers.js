@@ -7,7 +7,7 @@ exports.findAll = (req, res) => {
     if (err)
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving tutorials."
+          err.message || "Erreur d'affichage de Jeux"
       });
     else res.send(data);
   });
