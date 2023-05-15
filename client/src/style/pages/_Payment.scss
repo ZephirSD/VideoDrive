@@ -1,0 +1,173 @@
+.content-app-pay{
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+    width: calc(100% - 10% * 2);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	text-align: left;
+	width: 60vw;
+	min-height: 55vh;
+	background-color: #cacaca2a;
+	
+	padding: 20px;
+	border-radius: 10px;
+	
+	.recap-content{
+		display: flex;
+		flex-direction: column;
+		
+		margin-top: 30px;
+		margin-left: 20px;
+		color: #fff;
+		h2{
+			margin-left: -5px;
+			margin-top: -10px;
+			
+		}
+		div{
+			
+			padding-bottom: 10px;
+		}
+		div span{
+			width: 200px;
+			margin-right: 50px;
+		}
+		.recap-content-article, .recap-content-total{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.recap-content-total{
+			margin-top: 30px;
+		}
+		.total-price-pay{
+			font-size: 28px;
+		}
+	}
+	.pay-content{
+		// align-items: l;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		margin-left: -70px;
+		h2{
+			text-align: left;margin-left: 15px;
+		}
+		h3{
+			font-size: 16px;
+			color: #FACD02;
+			text-align: left;
+			margin-left: 15px;
+		}
+	}
+}
+
+button.pay-button {
+	border: 2px solid #FACD02;
+	border-radius: 10px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	margin-left: 15px;
+	cursor: pointer;
+	padding: 10px 35px;
+	background-color: transparent;
+	color: #FACD02;
+	font-size: 0.95rem;
+	transition: 0.3s ease-in-out;
+	width: 200px;
+	height: 45px;
+	cursor: pointer;
+	transition: all 100ms ease-in-out;
+	will-change: transform, background-color, box-shadow;
+	&:hover {
+		background-color: #FACD02;
+		transition: 0.3s ease-in-out;
+		color: #0f172a;
+	}
+	&:active {
+		background-color: rgba(255, 0, 0, 0.325);
+		box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #e298d8;
+		transform: scale(0.99);
+		color: #fff;
+	}
+}
+
+
+.FormGroup {
+	margin: 0 15px 20px;
+	padding: 0;
+	border-style: none;
+	background-color: white;
+	will-change: opacity, transform;
+	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 black;
+	border-radius: 4px;
+}
+
+.FormRow {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-left: 15px;
+	// border-top: 1px solid #819efc;
+	img{
+		width: 50%;
+		margin-right: 5px;
+		margin-bottom: -2px;
+	}
+}
+
+.StripeElement--webkit-autofill {
+	background: transparent !important;
+}
+
+.StripeElement {
+	width: 100%;
+	padding: 11px 15px 11px 0;
+}
+
+.date-cvc-form{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	.FormGroup{
+		width: 100%;
+		
+	}
+	.logo-cvc{
+			width: 30%;
+			margin-right: 5px;
+		}
+}
+
+
+
+.app-pay {
+	margin-left: 25%;
+	margin-top: 5%;
+	margin-right: 25%;
+}
+
+h1,
+h3 {
+	text-align: center;
+}
+
+.payment-success{
+	
+	text-align: left;
+	h2{
+		color: rgb(121, 255, 121);
+		font-weight: lighter;
+	}
+}
+.Thank-you{
+	color: black;
+	margin-left: 20px;
+}
+.error{
+	color: red
+}

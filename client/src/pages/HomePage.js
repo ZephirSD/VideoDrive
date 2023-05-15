@@ -27,7 +27,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <div className="App">
+      <div>
         <section>
           <div>
             <ImageSlider slides={SliderData} />

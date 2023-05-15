@@ -78,6 +78,7 @@ h2{
 .games-list{
     margin-top: 150px;
     margin-bottom: 50px;
+    width: 98vw;
 }
 .games-title{
     display: flex;
@@ -171,11 +172,12 @@ h2{
         }
         .logo-panier{
             width: 70px;
-            height: 40px;
+            height: 38px;
             border:1px #03264C solid;
             border-radius: 5px;
             color: #03264C;
-            
+            align-items: center;
+            margin-top: 20px;
             &:hover{
                 border:1px #ffffff solid;
                 color: #ffffff;
@@ -195,6 +197,14 @@ h2{
             padding-top: 10px;
             display: flex;
             justify-content: space-around;
+
+            color: white;
+            border: none;
+            font-size: 14px;
+            margin-top: 20px;
+            img{
+                margin: 0 10px -5px 0;
+            }
             span{
                 text-align: center;
                 
@@ -214,17 +224,7 @@ h2{
             height: 20px;
         
         }  
-        button{
-            
-            color: white;
-            border: none;
-            font-size: 14px;
-            margin-top: 20px;
-            img{
-                margin: 0 10px -5px 0;
-            }
-            
-        }
+
         
         
     }
