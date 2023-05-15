@@ -171,3 +171,27 @@ h3 {
 .error{
 	color: red
 }
+
+// bouton acheter dans la fiche produit
+.btnAcheter{
+	border: 2px solid #FACD02;
+	border-radius: 10px;
+	margin-top: 30px;
+	cursor: pointer;
+	padding: 15px 35px;
+	background-color: transparent;
+	margin-left: 10px;
+	transition: 0.3s ease-in-out;
+	span{
+		color: #FACD02;
+		font-size: 0.95rem;	
+	}
+	&:hover {
+		background-color: #FACD02;
+		transition: 0.3s ease-in-out;
+		color: #0f172a;
+		span{
+			color: #0f172a;
+		}
+	}
+}

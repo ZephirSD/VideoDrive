@@ -31,6 +31,11 @@ function FicheProduit() {
                   <FontAwesomeIcon icon={faPlus} />
                 </span>
               </button>
+              <div className="btnAcheter">
+                <Link style={{ textDecoration: "none" }} to="/paymentPage">
+                  <span>Acheter</span>
+                </Link>
+              </div>
             </div>
             <div className="casePrix">
               <div className="prix">49,00 €</div>
@@ -54,11 +59,6 @@ function FicheProduit() {
           consequuntur itaque rerum, quas magni excepturi rem esse eveniet
           inventore aliquam quaerat fugiat neque doloremque nemo quae? Modi,
           adipisci rem numquam a quisquam ea! Doloribus, adipisci quo.
-        </div>
-        <div>
-          <Link style={{ textDecoration: "none" }} to="/paymentPage">
-            <button onClick="">Acheter</button>
-          </Link>
         </div>
       </main>
       <Footer />
