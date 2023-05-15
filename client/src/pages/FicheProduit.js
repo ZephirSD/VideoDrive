@@ -11,7 +11,7 @@ function FicheProduit() {
     const [jeuxIdListe, setjeuxIdListe] = useState([]);
     let paramID = useParams();
     const fetchJeuxId = async () => {
-       await axios.get(`http://127.0.0.1:5000/api/jeux/${paramID.id}`)
+       await axios.get(`http://127.0.0.1:4000/api/jeux/${paramID.id}`)
         .then(response => setjeuxIdListe(response.data));
     }
     useEffect(() => {

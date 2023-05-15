@@ -8,7 +8,7 @@ import axios from 'axios';
 function App() {
   const [jeuxListe, setjeuxListe] = useState([]);
   const fetchJeux = () => {
-    axios.get('http://127.0.0.1:5000/api/jeux')
+    axios.get('http://127.0.0.1:4000/api/jeux')
       .then(response => setjeuxListe(response.data));
   }
   useEffect(() => {
