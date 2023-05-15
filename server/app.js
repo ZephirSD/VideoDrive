@@ -54,6 +54,7 @@ app.get("/", (req, res) => {
 });
 
 require('./routes/jeuxRoutes')(app);
+require('./routes/paiementRoutes')(app);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}.`);
