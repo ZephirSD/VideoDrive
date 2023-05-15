@@ -10,7 +10,7 @@ import axios from "axios";
 import cvc from "../assets/images/paiement/cvc.PNG";
 import visa from "../assets/images/paiement/visa.PNG";
 
-export default function PaymentForm({ id }) {
+export default function PaymentForm({ id_jeux }) {
   const [success, setSuccess] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
@@ -38,7 +38,7 @@ export default function PaymentForm({ id }) {
           setSuccess(true);
           await axios.post("http://127.0.0.1:4000/api/paiement", {
             compte: id,
-            id_jeux: 1
+            id_jeux: id_jeux
           })
         }
       } catch (error) {
@@ -72,7 +72,7 @@ export default function PaymentForm({ id }) {
   const [jeuxIdListe, setjeuxIdListe] = useState([]);
   const fetchJeuxId = async () => {
     await axios
-      .get(`http://127.0.0.1:4000/api/jeux/${id}`)
+      .get(`http://127.0.0.1:4000/api/jeux/${id_jeux}`)
       .then((response) => setjeuxIdListe(response.data));
   };
   useEffect(() => {

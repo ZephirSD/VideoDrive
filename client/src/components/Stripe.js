@@ -10,7 +10,7 @@ function Stripe() {
   let paramID = useParams();
   return (
     <Elements stripe={stripePromise}>
-      <PaymentForm id={paramID.id} />
+      <PaymentForm id_jeux={paramID.id} />
     </Elements>
   );
 }
