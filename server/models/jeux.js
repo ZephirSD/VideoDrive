@@ -12,6 +12,23 @@ const Jeux = function(jeux) {
   this.date_publi = jeux.date_publi;
 };
 
+Jeux.findById = (id, result) => {
+  sql.query(`SELECT * FROM jeux WHERE id_jeux = ${id}`, (err, res) => {
+    if (err) {
+      console.log("error: ", err);
+      result(err, null);
+      return;
+    }
+
+    if (res.length) {
+      console.log("Jeux non trouvé: ", res[0]);
+      result(null, res[0]);
+      return;
+    }
+
+    result({ kind: "Pas de réponse" }, null);
+  });
+};
 
 Jeux.getAll = (nom, result) => {
   let query = "SELECT * FROM jeux";

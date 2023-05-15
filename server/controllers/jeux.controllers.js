@@ -12,3 +12,19 @@ exports.findAll = (req, res) => {
     else res.send(data);
   });
 };
+
+exports.findOne = (req, res) => {
+  Jeux.findById(req.params.id, (err, data) => {
+    if (err) {
+      if (err.kind === "Pas de réponses") {
+        res.status(404).send({
+          message: `Jeux non trouvé à l'id ${req.params.id}.`
+        });
+      } else {
+        res.status(500).send({
+          message: "Erreur de réponse à l'id " + req.params.id
+        });
+      }
+    } else res.send(data);
+  });
+};
