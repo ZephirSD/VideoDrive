@@ -15,6 +15,7 @@ function FicheProduit() {
       .get(`http://127.0.0.1:4000/api/jeux/${paramID.id}`)
       .then((response) => setjeuxIdListe(response.data));
   };
+  window.scrollTo(0, 0);
   useEffect(() => {
     fetchJeuxId();
   }, []);

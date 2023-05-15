@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 const ListeProduit = ({ jeuxListe }) => {
+  window.scrollTo(0, 0);
   return (
     <>
       <Header />
