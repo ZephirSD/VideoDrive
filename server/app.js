@@ -1,16 +1,22 @@
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const express = require('express');
+const dbConfig = require('./config/db.config');
+const router = require('./routes/jeuxRoutes');
 const app = express();
 const port = 5000;
 
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/', { useNewUrlParser: true})
-.then(()=>{
-  app.listen(port);
-  console.log('MongoDB Connecté');
-})
+app.use(express.urlencoded({ extended: true }));
 
-app.get('/', function (req, res) {
-  res.send('Hello World');
-})
+// simple route
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to bezkoder application." });
+});
+
+require('./routes/jeuxRoutes')(app);
+
+// set port, listen for requests
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}.`);
+});
