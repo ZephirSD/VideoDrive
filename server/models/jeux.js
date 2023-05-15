@@ -9,6 +9,7 @@ const Jeux = function(jeux) {
   this.prix_occasion = jeux.prix_occasion;
   this.prix_expo = jeux.prix_expo;
   this.editeur = jeux.editeur;
+  this.date_publi = jeux.date_publi;
 };
 
 
