@@ -12,12 +12,15 @@ app.use(express.json());
 require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST);
 const bodyParser = require("body-parser");
-const cors = require("cors");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(cors());
+var corsOptions = {
+  origin: "http://localhost:3000"
+};
+
+app.use(cors(corsOptions));
 
 app.post("/payment", cors(), async (req, res) => {
   let { amount, id } = req.body;
@@ -45,12 +48,6 @@ app.post("/payment", cors(), async (req, res) => {
   }
 });
 app.use(express.urlencoded({ extended: true }));
-
-var corsOptions = {
-  origin: "http://localhost:3000"
-};
-
-app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
   res.json({ message: "Application connecté" });
