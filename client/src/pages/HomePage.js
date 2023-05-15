@@ -42,7 +42,7 @@ const HomePage = ({ jeuxListe }) => {
             <div className="games-container">
               {
                 jeuxListe.map((jeu, index) => (
-                  <Game key={index} nom={jeu.nom} prix={jeu.prix_neuf} image={jeu.image}/>
+                  <Game key={index} nom={jeu.nom} prix={jeu.prix_neuf} image={jeu.image} id={jeu.id_jeux}/>
                 ))
               }
             </div>
@@ -56,7 +56,7 @@ const HomePage = ({ jeuxListe }) => {
             <div className="games-container">
               {
                 jeuxListe.map((jeu, index) => (
-                  <Game key={index} nom={jeu.nom} prix={jeu.prix_neuf} image={jeu.image}/>
+                  <Game key={index} nom={jeu.nom} prix={jeu.prix_neuf} image={jeu.image} id={jeu.id_jeux}/>
                 ))
               }
             </div>
