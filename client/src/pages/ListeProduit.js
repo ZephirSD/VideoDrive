@@ -10,7 +10,32 @@ const ListeProduit = ({ jeuxListe }) => {
       <Header />
       <div>
         <section className="games-full-list">
-          <h4>Tous les jeux</h4>
+          <div className="games-full-list-title">
+            <h4>Tous les jeux</h4>
+            <div className="filter-option">
+              <div class="select">
+                <select>
+                  <option>Catégorie 1</option>
+                  <option>Catégorie 2</option>
+                </select>
+              </div>
+              <div class="select">
+                <select>
+                  <option> Marque 1 </option>
+                  <option> Marque 2 </option>
+                  <option> Marque 3 </option>
+                </select>
+              </div>
+              <div class="select">
+                <select>
+                  <option> 50€ </option>
+                  <option> Inférieur à 50€ </option>
+                  <option> Plus de 50€ </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
           <div>
             <div className="games-container">
               {jeuxListe.map((jeu, index) => (
