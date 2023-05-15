@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
 
-const Game = () => {
-  let urlImg = "http://www.videodrive.fr/jeuxps5/ymm9de.jpg";
+const Game = ({nom, prix, image }) => {
+  // let urlImg = "http://www.videodrive.fr/jeuxps5/ymm9de.jpg";
 
+  // console.log(jeu);
   // ----------------------------------------
   return (
     <Link style={{ textDecoration: "none" }} to="/ficheProduit">
       <div className="game">
         <div className="img-container">
-          <img src={urlImg} alt="Logo-Game" />
+          <img src={image} alt="Logo-Game" />
         </div>
 
         <div className="info-container">
           <div className="info-title">
-            <h3>Ys IX Monstrum Nox Deluxe Edition</h3>
-            <span>39€</span>
+            <h3>{nom}</h3>
+            <span>{ `${prix}€`}</span>
           </div>
           <div>
             <div>

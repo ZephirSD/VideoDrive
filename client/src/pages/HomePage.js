@@ -23,7 +23,7 @@ const SliderData = [
     image: "http://www.videodrive.fr/pub/opo.jpg",
   },
 ];
-const HomePage = () => {
+const HomePage = ({ jeuxListe }) => {
   return (
     <>
       <Header />
@@ -40,11 +40,11 @@ const HomePage = () => {
               <span>Voir plus ...</span>
             </div>
             <div className="games-container">
-              <Game />
-              <Game />
-              <Game />
-              <Game />
-              <Game />
+              {
+                jeuxListe.map((jeu, index) => (
+                  <Game key={index} nom={jeu.nom} prix={jeu.prix_neuf} image={jeu.image}/>
+                ))
+              }
             </div>
           </div>
           <div>
@@ -54,11 +54,11 @@ const HomePage = () => {
             </div>
 
             <div className="games-container">
-              <Game />
-              <Game />
-              <Game />
-              <Game />
-              <Game />
+              {
+                jeuxListe.map((jeu, index) => (
+                  <Game key={index} nom={jeu.nom} prix={jeu.prix_neuf} image={jeu.image}/>
+                ))
+              }
             </div>
           </div>
         </section>
