@@ -36,6 +36,10 @@ export default function PaymentForm() {
         if (response.data.success) {
           console.log("Successful Payment");
           setSuccess(true);
+          await axios.post("http://127.0.0.1:4000/api/paiement", {
+            compte: id,
+            id_jeux: 1
+          })
         }
       } catch (error) {
         console.log("Error", error);
