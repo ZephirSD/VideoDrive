@@ -1,6 +1,9 @@
-const express = require("express");
+const express = require('express');
+const dbConfig = require('./config/db.config');
+const router = require('./routes/jeuxRoutes');
 const app = express();
-const port = 5000;
+const port = 4000;
+const cors = require("cors");
 
 app.use(express.json());
 
@@ -41,8 +44,20 @@ app.post("/payment", cors(), async (req, res) => {
     });
   }
 });
+app.use(express.urlencoded({ extended: true }));
 
-app.listen(process.env.PORT || 4000, () => {
-  console.log("Server is running");
+var corsOptions = {
+  origin: "http://localhost:3000"
+};
+
+app.use(cors(corsOptions));
+
+app.get("/", (req, res) => {
+  res.json({ message: "Application connecté" });
 });
-// -----------------------------------
+
+require('./routes/jeuxRoutes')(app);
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}.`);
+});
