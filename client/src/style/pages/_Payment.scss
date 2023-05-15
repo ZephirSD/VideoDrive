@@ -195,3 +195,36 @@ h3 {
 		}
 	}
 }
+@media screen and (max-width: 1120px) {
+	.content-app-pay{
+		width: 75%;
+		flex-direction: column;
+		margin: unset auto;
+		.recap-content{
+			margin: unset;	
+			h2{
+				text-align: center;
+			}
+			.recap-content-article{
+				span:nth-child(2) {
+					display: inline-block;
+					float: right;
+				}
+			}
+		}
+		.pay-content{
+			margin: unset;
+			h2{
+				margin: unset;
+				text-align: center;
+			}
+		}
+		div.caseBtnPay{
+			display: flex;
+			justify-content: center;
+			button.pay-button{
+				margin-left: unset;
+			}
+		}
+	}
+}
