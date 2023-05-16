@@ -14,6 +14,21 @@ export default function PaymentForm({ id_jeux }) {
   const [success, setSuccess] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
+
+  const [jeuxIdListe, setjeuxIdListe] = useState([]);
+
+  const fetchJeuxId = async () => {
+    await axios
+      .get(`http://127.0.0.1:4000/api/jeux/${id_jeux}`)
+      .then((response) => setjeuxIdListe(response.data));
+  };
+  useEffect(() => {
+    fetchJeuxId();
+  }, []);
+
+  let quantite = 1;
+  let dollar = jeuxIdListe.prix_neuf + "00";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { error, paymentMethod } = await stripe.createPaymentMethod({
@@ -29,7 +44,7 @@ export default function PaymentForm({ id_jeux }) {
       try {
         const { id } = paymentMethod;
         const response = await axios.post("http://localhost:4000/payment", {
-          amount: 10000,
+          amount: dollar,
           id,
         });
 
@@ -38,8 +53,8 @@ export default function PaymentForm({ id_jeux }) {
           setSuccess(true);
           await axios.post("http://127.0.0.1:4000/api/paiement", {
             compte: id,
-            id_jeux: id_jeux
-          })
+            id_jeux: id_jeux,
+          });
         }
       } catch (error) {
         console.log("Error", error);
@@ -69,17 +84,6 @@ export default function PaymentForm({ id_jeux }) {
     },
   };
 
-  const [jeuxIdListe, setjeuxIdListe] = useState([]);
-  const fetchJeuxId = async () => {
-    await axios
-      .get(`http://127.0.0.1:4000/api/jeux/${id_jeux}`)
-      .then((response) => setjeuxIdListe(response.data));
-  };
-  useEffect(() => {
-    fetchJeuxId();
-  }, []);
-
-  let quantite = 1;
   return (
     <>
       <div className="content-app-pay">

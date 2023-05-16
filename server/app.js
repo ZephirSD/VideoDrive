@@ -1,6 +1,6 @@
-const express = require('express');
-const dbConfig = require('./config/db.config');
-const router = require('./routes/jeuxRoutes');
+const express = require("express");
+const dbConfig = require("./config/db.config");
+const router = require("./routes/jeuxRoutes");
 const app = express();
 const port = 4000;
 const cors = require("cors");
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 var corsOptions = {
-  origin: "http://localhost:3000"
+  origin: "http://localhost:3000",
 };
 
 app.use(cors(corsOptions));
@@ -28,15 +28,15 @@ app.post("/payment", cors(), async (req, res) => {
   try {
     const payment = await stripe.paymentIntents.create({
       amount,
-      currency: "USD",
-      description: "Paiment",
+      currency: "EUR",
+      description: "Paiement",
       payment_method: id,
       confirm: true,
     });
 
-    console.log("Paiment", payment);
+    console.log("Paiement", payment);
     res.json({
-      message: "Paiment effectué avec succès",
+      message: "Paiement effectué avec succès",
       success: true,
     });
   } catch (error) {
@@ -53,8 +53,8 @@ app.get("/", (req, res) => {
   res.json({ message: "Application connecté" });
 });
 
-require('./routes/jeuxRoutes')(app);
-require('./routes/paiementRoutes')(app);
+require("./routes/jeuxRoutes")(app);
+require("./routes/paiementRoutes")(app);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}.`);
