@@ -39,8 +39,8 @@ const ImageSlider = ({ slides }) => {
       <div className="left-arrow" onClick={prevSlide}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="46"
-          height="46"
+          width="30"
+          height="30"
           fill="currentColor"
           class="bi bi-chevron-left"
           viewBox="0 0 16 16"
@@ -54,8 +54,8 @@ const ImageSlider = ({ slides }) => {
       <div className="right-arrow" onClick={nextSlide}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="46"
-          height="46"
+          width="30"
+          height="30"
           fill="currentColor"
           class="bi bi-chevron-right"
           viewBox="0 0 16 16"
