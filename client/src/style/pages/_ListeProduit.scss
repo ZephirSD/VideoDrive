@@ -1,14 +1,16 @@
-.games-full-list{
+.games-full-list {
 
-    margin:20px;
+    margin: 20px;
     margin-bottom: 30px;
-    h4{
+
+    h4 {
         text-align: center;
         font-size: 24px;
         color: #FACD02;
     }
 }
-.games-full-list-title{
+
+.games-full-list-title {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,53 +18,78 @@
     margin-left: 45px;
     margin-right: 45px;
 }
-.filter-option{
+
+.filter-option {
     display: flex;
     flex-direction: row;
     justify-content: end;
-    div{
-       margin-left: 20px; 
+
+    div {
+        margin-left: 20px;
     }
-    
+
 }
+
 .select {
     // position: relative;
     // display: inline-block;
     // margin-bottom: 15px;
     width: 150px;
-}    
-.select select {
-        font-family: 'Arial';
-        display: inline-block;
-        width: 100%;
-        cursor: pointer;
-        padding: 12px 15px;
-        outline: 0;
-        border: 0px solid #000000;
-        border-radius: 10px;
-        background: #e6e6e6;
-        color: #7b7b7b;
-        // appearance: none;
-        // -webkit-appearance: none;
-        // -moz-appearance: none;
-    }
-        .select select::-ms-expand {
-            display: none;
-        }
-        .select select:hover,
-        .select select:focus {
-            color: #000000;
-            background: #cccccc;
-        }
-        .select select:disabled {
-            opacity: 0.5;
-            pointer-events: none;
-        }
+}
 
-.select select:hover ~ .select_arrow,
-.select select:focus ~ .select_arrow {
+.select select {
+    font-family: 'Arial';
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 12px 15px;
+    outline: 0;
+    border: 0px solid #000000;
+    border-radius: 10px;
+    background: #e6e6e6;
+    color: #7b7b7b;
+    // appearance: none;
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+}
+
+.select select::-ms-expand {
+    display: none;
+}
+
+.select select:hover,
+.select select:focus {
+    color: #000000;
+    background: #cccccc;
+}
+
+.select select:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.select select:hover~.select_arrow,
+.select select:focus~.select_arrow {
     border-color: #000000;
 }
-.select select:disabled ~ .select_arrow {
+
+.select select:disabled~.select_arrow {
     border-top-color: #cccccc;
+}
+
+@media screen and (max-width: 1120px) {
+    .games-full-list-title {
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    div.select {
+        width: 20vw;
+
+        select {
+            padding: 10px 15px;
+            border-radius: 5px;
+            // width: ;
+        }
+    }
 }
