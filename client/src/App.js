@@ -17,7 +17,6 @@ function App() {
     fetchJeux();
   }, []);
   return (
-    // <HomePage />
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage jeuxListe={jeuxListe} />}></Route>

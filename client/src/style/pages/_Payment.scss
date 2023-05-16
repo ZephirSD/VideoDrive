@@ -245,6 +245,20 @@ h3 {
 				margin: unset;
 				text-align: center;
 			}
+
+			div.payment-success {
+				h2 {
+					font-size: 1.15rem;
+					margin: 5px 0px;
+				}
+
+				.Thank-you {
+					margin-left: unset;
+					text-align: center;
+					font-size: 0.85rem;
+					margin: 2px 0px;
+				}
+			}
 		}
 
 		div.caseBtnPay {
