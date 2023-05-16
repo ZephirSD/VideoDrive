@@ -129,7 +129,7 @@ export default function PaymentForm({ id_jeux }) {
                 </fieldset>
               </div>
 
-              <div>
+              <div className="caseBtnPay">
                 <button className="pay-button">Payer </button>
               </div>
             </form>

@@ -13,6 +13,14 @@ body {
     padding: 0;
     margin: 0;
     background-color: #03264C;
+    // box-sizing: border-box;
+    position: relative;
+}
+
+@media screen and (max-width: 1120px) {
+    body {
+        overflow-x: hidden;
+    }
 }
 
 //Thème clair et sombre pour le projet
