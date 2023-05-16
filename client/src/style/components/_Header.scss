@@ -66,7 +66,7 @@ header {
 }
 
 @media screen and (max-width: 1120px) {
-    header.header_mobile{
+    header.header_mobile {
         display: grid;
         grid-template-columns: repeat(2, auto);
         justify-content: space-between;
@@ -74,32 +74,37 @@ header {
         padding: unset;
         width: 100%;
         margin-bottom: 45px;
-        z-index: 3;
-        div.clickHeader{
+        z-index: 11;
+
+        div.clickHeader {
             position: absolute;
             top: 15px;
             left: 15px;
-            z-index: 5;
+            z-index: 12;
         }
+
         div.flexSearch {
             margin-right: 15px;
             position: absolute;
             right: 5px;
             top: 10px;
+
             .search {
                 input {
                     width: 45vw;
                     height: 25px;
+
                     &:focus {
                         outline: none;
                     }
-                    &::placeholder{
+
+                    &::placeholder {
                         font-family: var(--poppins);
                         font-style: italic;
                         font-size: 0.75rem;
                     }
-                } 
-    
+                }
+
                 .logo-search {
                     display: flex;
                     align-items: center;
@@ -110,10 +115,11 @@ header {
                     padding-left: unset;
                     color: white;
                 }
-    
+
             }
         }
-        nav{
+
+        nav {
             height: 100vh;
             width: 55vw;
             background-color: #03264C;
@@ -125,8 +131,9 @@ header {
             top: 0;
             left: -55vw;
             transition: 0.25s ease-in-out;
-            z-index: 4;
-            li{
+            z-index: 11;
+
+            li {
                 margin: 5px 0px;
                 text-align: center;
             }
