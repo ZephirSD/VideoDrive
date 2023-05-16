@@ -5,7 +5,7 @@ import ImageSlider from "../components/ImageSlider";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 // import { SliderData } from "./components/SliderData";
-
+import { Link } from "react-router-dom";
 const SliderData = [
   {
     image: "http://www.videodrive.fr/pub/w2k23.jpg",
@@ -38,29 +38,50 @@ const HomePage = ({ jeuxListe }) => {
           <div>
             <div className="games-title">
               <h2>Nouveautés</h2>
-
-              <span>Voir plus ...</span>
+              <span>
+                <Link
+                  to={"/listeProduit"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Voir plus ...
+                </Link>
+              </span>
             </div>
             <div className="games-container">
-              {
-                jeuxListe.map((jeu, index) => (
-                  <Game key={index} nom={jeu.nom} prix={jeu.prix_neuf} image={jeu.image} id={jeu.id_jeux}/>
-                ))
-              }
+              {jeuxListe.map((jeu, index) => (
+                <Game
+                  key={index}
+                  nom={jeu.nom}
+                  prix={jeu.prix_neuf}
+                  image={jeu.image}
+                  id={jeu.id_jeux}
+                />
+              ))}
             </div>
           </div>
           <div>
             <div className="games-title">
               <h2>Recommandés</h2>
-              <span>Voir plus ...</span>
+              <span>
+                <Link
+                  to={"/listeProduit"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Voir plus ...
+                </Link>
+              </span>
             </div>
 
             <div className="games-container">
-              {
-                jeuxListe.map((jeu, index) => (
-                  <Game key={index} nom={jeu.nom} prix={jeu.prix_neuf} image={jeu.image} id={jeu.id_jeux}/>
-                ))
-              }
+              {jeuxListe.map((jeu, index) => (
+                <Game
+                  key={index}
+                  nom={jeu.nom}
+                  prix={jeu.prix_neuf}
+                  image={jeu.image}
+                  id={jeu.id_jeux}
+                />
+              ))}
             </div>
           </div>
         </section>
